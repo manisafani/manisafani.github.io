@@ -1,0 +1,1 @@
+Simpan foto profesional di folder ini dengan nama foto-manisa.jpg. Lihat README.md untuk langkah mengganti placeholder foto pada index.html.

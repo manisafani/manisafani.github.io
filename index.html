@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio profesional Manisa Fani Rahmasari — administrasi, pelayanan pelanggan, dan pengelolaan informasi.">
+  <meta name="theme-color" content="#111d32">
+  <title>Manisa Fani Rahmasari | Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #111d32;
+      --navy-2: #1b2b45;
+      --burgundy: #501c32;
+      --wine: #79364d;
+      --rose: #d8c2c3;
+      --ivory: #e9e5e1;
+      --white: #f8f7f5;
+      --muted: #aeb8c7;
+      --line: rgba(233,229,225,.17);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--navy); color: var(--white); font-family: var(--sans); line-height: 1.65; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow { color: var(--rose); text-transform: uppercase; letter-spacing: .2em; font-size: .68rem; font-weight: 700; }
+    .serif { font-family: var(--serif); font-weight: 400; }
+    .section { padding: 104px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 38px; }
+    h2 { margin: 8px 0 0; font: 500 clamp(2.2rem, 5vw, 4rem)/1.08 var(--serif); letter-spacing: -.035em; }
+    .section-intro { color: var(--muted); max-width: 460px; margin: 0; font-size: .94rem; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(17,29,50,.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font: 500 1.2rem var(--serif); letter-spacing: .08em; line-height: 1.1; }
+    .brand small { display: block; margin-top: 5px; font: 600 .55rem var(--sans); letter-spacing: .25em; color: var(--rose); }
+    .nav-links { display: flex; align-items: center; gap: 26px; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: #d9de e6; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 12px 19px; border: 1px solid rgba(216,194,195,.6); border-radius: 999px; color: var(--white); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; transition: .2s; }
+    .nav-cta:hover, .btn:hover { background: var(--burgundy); border-color: var(--burgundy); transform: translateY(-2px); }
+    .menu-btn { display: none; border: 1px solid var(--line); background: transparent; color: white; padding: 8px 12px; border-radius: 8px; }
+    .hero { position: relative; overflow: hidden; padding: 92px 0 84px; background: radial-gradient(ellipse at 78% 35%, rgba(80,28,50,.72), transparent 38%), linear-gradient(120deg, #111d32 30%, #18243a 100%); }
+    .hero:after { content: ""; position: absolute; width: 470px; height: 470px; border: 1px solid rgba(216,194,195,.16); border-radius: 50%; right: -150px; top: 5px; box-shadow: 0 0 0 35px rgba(216,194,195,.025), 0 0 0 75px rgba(216,194,195,.02); pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 48px; position: relative; z-index: 1; }
+    .hero h1 { font: 500 clamp(3.3rem, 8.4vw, 7.5rem)/.94 var(--serif); letter-spacing: -.055em; margin: 20px 0; }
+    .hero h1 span { display: block; color: var(--rose); font-style: italic; }
+    .hero-copy { max-width: 560px; color: #c5ceda; font-size: 1rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn.primary { background: var(--rose); border-color: var(--rose); color: var(--navy); font-weight: 700; }
+    .hero-note { display: flex; gap: 12px; align-items: center; margin-top: 34px; color: var(--muted); font-size: .75rem; letter-spacing: .04em; }
+    .hero-note:before { content: ""; width: 38px; height: 1px; background: var(--wine); }
+    .portrait-frame { position: relative; max-width: 390px; justify-self: center; width: 100%; aspect-ratio: .82; border-radius: 48% 48% 12px 12px; padding: 10px; background: linear-gradient(145deg, rgba(216,194,195,.8), var(--burgundy) 45%, transparent); }
+    .portrait { height: 100%; border-radius: inherit; background: linear-gradient(150deg, #35445a, #54253b 70%, #1c2537); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 28px; border: 1px solid rgba(255,255,255,.14); overflow: hidden; }
+    .portrait .monogram { font: 500 clamp(5rem, 12vw, 8rem)/1 var(--serif); color: rgba(248,247,245,.88); }
+    .portrait p { max-width: 210px; color: #e8dadd; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+    .portrait small { color: rgba(248,247,245,.58); font-size: .65rem; margin-top: 12px; }
+    .about { background: var(--white); color: var(--navy); }
+    .about .section-intro { color: #667184; }
+    .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 70px; align-items: start; }
+    .about-quote { font: 500 clamp(2rem, 4vw, 3.5rem)/1.14 var(--serif); margin: 0; }
+    .about-quote em { color: var(--wine); }
+    .about-text { color: #536074; margin-top: 22px; max-width: 570px; }
+    .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+    .stat { padding: 24px; background: #fff; border: 1px solid #e4e0dd; min-height: 145px; }
+    .stat strong { display: block; font: 500 2.5rem var(--serif); color: var(--burgundy); }
+    .stat span { display: block; font-size: .78rem; color: #657083; margin-top: 7px; }
+    .education { margin-top: 28px; padding-top: 22px; border-top: 1px solid #d9d5d2; }
+    .education strong { display: block; }
+    .education span { color: #667184; font-size: .85rem; }
+    .experience { background: #172640; }
+    .timeline { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 27px 0; border-top: 1px solid var(--line); }
+    .timeline:last-child { border-bottom: 1px solid var(--line); }
+    .timeline time { color: var(--rose); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; padding-top: 5px; }
+    .timeline h3 { margin: 0; font: 500 1.65rem var(--serif); }
+    .timeline .role { color: var(--rose); font-size: .82rem; margin: 3px 0 12px; }
+    .timeline ul { color: #c2ccda; margin: 0; padding-left: 18px; font-size: .9rem; }
+    .projects { background: #0d1729; }
+    .project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .project-card { background: linear-gradient(145deg, #1b2b45, #281c30); border: 1px solid rgba(216,194,195,.18); padding: 26px; min-height: 270px; display: flex; flex-direction: column; justify-content: space-between; transition: transform .25s, border-color .25s; }
+    .project-card:hover { transform: translateY(-5px); border-color: rgba(216,194,195,.55); }
+    .project-top { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+    .project-no { color: var(--rose); font: 500 2.1rem var(--serif); }
+    .tag { border: 1px solid rgba(216,194,195,.35); color: #e5cfd4; border-radius: 999px; padding: 5px 10px; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; }
+    .project-card h3 { font: 500 1.8rem/1.15 var(--serif); margin: 30px 0 9px; }
+    .project-card p { color: #bdc7d5; font-size: .85rem; margin: 0; }
+    .project-foot { margin-top: 24px; color: var(--rose); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+    .disclaimer { margin-top: 18px; color: #aeb8c7; font-size: .75rem; }
+    .process { background: var(--burgundy); }
+    .process .eyebrow { color: #f0dce1; }
+    .process-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 18px; }
+    .process-item { border-top: 1px solid rgba(248,247,245,.35); padding-top: 16px; }
+    .process-item strong { display: block; font: 500 2.8rem var(--serif); color: var(--rose); }
+    .process-item h3 { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; margin: 7px 0; }
+    .process-item p { color: #e0cbd1; font-size: .78rem; margin: 0; }
+    .skills { background: var(--white); color: var(--navy); }
+    .skills .section-intro { color: #667184; }
+    .skill-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .skill-card { padding: 25px; border: 1px solid #dedbd8; background: #fff; }
+    .skill-card .icon { color: var(--wine); font: 500 2rem var(--serif); }
+    .skill-card h3 { font: 500 1.35rem var(--serif); margin: 12px 0 8px; }
+    .skill-card p { color: #637084; font-size: .85rem; margin: 0; }
+    .contact { background: radial-gradient(ellipse at 90% 70%, rgba(80,28,50,.8), transparent 38%), var(--navy); }
+    .contact-panel { border: 1px solid rgba(216,194,195,.28); padding: clamp(28px,6vw,65px); display: grid; grid-template-columns: 1fr .8fr; gap: 35px; align-items: center; background: rgba(80,28,50,.24); }
+    .contact h2 { max-width: 600px; }
+    .contact p { color: #c4cedb; max-width: 500px; }
+    .contact-links { display: grid; gap: 15px; font-size: .88rem; }
+    .contact-links a { border-bottom: 1px solid var(--line); padding-bottom: 12px; overflow-wrap: anywhere; }
+    .contact-links a:hover { color: var(--rose); }
+    footer { padding: 24px 0; border-top: 1px solid var(--line); color: #aeb8c7; font-size: .72rem; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+    @media (max-width: 800px) {
+      .nav-links { display: none; position: absolute; left: 0; right: 0; top: 76px; background: var(--navy); padding: 22px 24px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; }
+      .nav-links.open { display: flex; }
+      .menu-btn { display: block; }
+      .nav-cta { display: none; }
+      .hero { padding: 70px 0; }
+      .hero-grid, .about-grid, .contact-panel { grid-template-columns: 1fr; }
+      .portrait-frame { max-width: 300px; grid-row: 1; }
+      .hero-copy-wrap { grid-row: 2; }
+      .about-grid { gap: 35px; }
+      .process-grid { grid-template-columns: repeat(2,1fr); }
+      .skill-grid { grid-template-columns: 1fr 1fr; }
+      .section { padding: 76px 0; }
+    }
+    @media (max-width: 540px) {
+      .wrap { width: min(100% - 34px, var(--max)); }
+      .hero h1 { font-size: clamp(3.1rem, 17vw, 5rem); }
+      .section-head { display: block; }
+      .section-intro { margin-top: 17px; }
+      .stats, .project-grid, .skill-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; gap: 7px; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .contact-panel { padding: 26px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home">MANISA FANI<small>PORTOFOLIO PROFESIONAL</small></a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#home">Beranda</a><a href="#about">Tentang</a><a href="#experience">Pengalaman</a><a href="#projects">Proyek</a><a href="#skills">Keahlian</a><a href="#contact">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Mari Terhubung ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">Menu ☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy-wrap reveal">
+          <div class="eyebrow">Portofolio Profesional · 2026</div>
+          <h1>Saya percaya<br><span>layanan terbaik</span><br>dimulai dari detail.</h1>
+          <p class="hero-copy">Halo, saya <strong>Manisa Fani Rahmasari</strong> — lulusan Manajemen dengan pengalaman di bidang administrasi dan pelayanan pelanggan. Saya senang menciptakan proses kerja yang rapi, informatif, dan berorientasi pada kebutuhan pengguna layanan.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#experience">Jelajahi Pengalaman ↘</a>
+            <a class="btn" href="#projects">Lihat Proyek</a>
+          </div>
+          <div class="hero-note">Administrasi · Pelayanan Pelanggan · Pengelolaan Data</div>
+        </div>
+        <div class="portrait-frame reveal" aria-label="Tempat foto profesional Manisa">
+          <div class="portrait">
+            <div class="monogram">MF</div>
+            <p>Tempat foto profesional</p>
+            <small>Ganti dengan foto pilihanmu</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">01 / Tentang Saya</div><h2 class="serif">Terorganisir dalam proses,<br><em>peduli pada manusia.</em></h2></div>
+          <p class="section-intro">Saya menggabungkan ketelitian administrasi dengan komunikasi yang jelas untuk membantu aktivitas operasional dan kebutuhan pelanggan berjalan lebih baik.</p>
+        </div>
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="about-quote">“Bekerja dengan <em>teliti</em>, melayani dengan empati, dan terus bertumbuh.”</p>
+            <p class="about-text">Saya merupakan lulusan S1 Manajemen Universitas Pembangunan Nasional “Veteran” Yogyakarta. Memiliki pengalaman dalam administrasi umum, administrasi keuangan, serta pelayanan peserta. Saya senang belajar hal baru, beradaptasi, dan berkontribusi dalam lingkungan kerja profesional.</p>
+            <div class="education"><div class="eyebrow">Pendidikan</div><strong>Universitas Pembangunan Nasional “Veteran” Yogyakarta</strong><span>S1 Manajemen · Agustus 2022 – April 2026 · IPK 3,75 / 4,00</span></div>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><strong>3,75</strong><span>IPK Sarjana Manajemen</span></div>
+            <div class="stat"><strong>3</strong><span>Area pengalaman: administrasi, keuangan, layanan</span></div>
+            <div class="stat"><strong>2026</strong><span>Tahun kelulusan S1 Manajemen</span></div>
+            <div class="stat"><strong>Teliti</strong><span>Berorientasi pada detail dan kualitas layanan</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">02 / Perjalanan Profesional</div><h2>Pengalaman yang<br><em>membentuk kompetensi.</em></h2></div>
+          <p class="section-intro">Pengalaman kerja dan magang yang membangun kemampuan saya dalam pengelolaan administrasi, koordinasi, dan interaksi dengan pelanggan.</p>
+        </div>
+        <article class="timeline reveal"><time>Sep 2026 – Sekarang</time><div><h3>BPJS Kesehatan – KC Jakarta Selatan</h3><div class="role">Frontliner · MagangHub Batch 2 II</div><ul><li>Membantu registrasi aplikasi Mobile JKN serta penanganan kendala penggunaan aplikasi.</li><li>Membantu proses administrasi dan memberikan informasi terkait pengajuan berita acara rekonsiliasi peserta.</li><li>Membantu memberikan solusi dan menyosialisasikan kanal layanan online BPJS Kesehatan.</li></ul></div></article>
+        <article class="timeline reveal"><time>Jul 2024 – Agu 2026</time><div><h3>Khadeejah Islamic Daycare</h3><div class="role">Staf Keuangan</div><ul><li>Mengelola pencatatan biaya penitipan, overtime, dan biaya tambahan.</li><li>Membuat invoice bulanan serta memproses pembayaran orang tua/wali.</li><li>Menyusun laporan keuangan harian, bulanan, dan rencana keuangan tahunan.</li></ul></div></article>
+        <article class="timeline reveal"><time>Mei 2022 – Jun 2024</time><div><h3>Khadeejah Islamic Daycare</h3><div class="role">Staf Administrasi</div><ul><li>Mengelola data peserta didik, orang tua/wali, dan arsip administrasi.</li><li>Mengelola administrasi pendaftaran peserta didik baru.</li><li>Membuat laporan harian, rapor enam bulanan, dan laporan untuk dinas terkait.</li></ul></div></article>
+        <article class="timeline reveal"><time>Feb 2026</time><div><h3>BPR Syariah Barokah Dana Sejahtera</h3><div class="role">Pengalaman Magang</div><ul><li>Membantu kelengkapan administrasi berkas pencairan perkreditan nasabah.</li><li>Mendukung komunikasi internal antar divisi dan penyortiran berkas keuangan nasabah.</li></ul></div></article>
+        <article class="timeline reveal"><time>Sep – Nov 2025</time><div><h3>BPJS Kesehatan – KC Sleman</h3><div class="role">Service Officer</div><ul><li>Mendampingi peserta yang mengalami kendala dalam penggunaan aplikasi Mobile JKN.</li><li>Membantu memberikan solusi dan menyosialisasikan kanal layanan online BPJS Kesehatan.</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><div class="eyebrow">03 / Featured Projects</div><h2>Contoh karya &<br><em>simulasi pekerjaan.</em></h2></div>
+          <p class="section-intro">Contoh berikut dirancang untuk memperlihatkan pendekatan kerja dan kemampuan teknis. Seluruh data pada proyek simulasi bersifat fiktif.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal"><div class="project-top"><span class="project-no">01</span><span class="tag">Excel · Administrasi</span></div><div><h3>Database Administrasi</h3><p>Rancangan database peserta dan arsip administrasi dengan struktur kolom, kategori, dan status dokumen agar informasi mudah ditelusuri.</p></div><div class="project-foot">Simulasi · Data fiktif</div></article>
+          <article class="project-card reveal"><div class="project-top"><span class="project-no">02</span><span class="tag">Excel · Pelaporan</span></div><div><h3>Rekapitulasi Layanan</h3><p>Template rekap layanan harian untuk mencatat jenis permintaan, status tindak lanjut, dan ringkasan aktivitas pelayanan.</p></div><div class="project-foot">Simulasi · Data fiktif</div></article>
+          <article class="project-card reveal"><div class="project-top"><span class="project-no">03</span><span class="tag">Dokumen · Administrasi</span></div><div><h3>Checklist Kelengkapan Berkas</h3><p>Format pemeriksaan dokumen untuk membantu proses verifikasi, mengurangi berkas terlewat, dan memantau status kelengkapan.</p></div><div class="project-foot">Simulasi · Data fiktif</div></article>
+          <article class="project-card reveal"><div class="project-top"><span class="project-no">04</span><span class="tag">Customer Service · Workflow</span></div><div><h3>Alur Penanganan Pertanyaan</h3><p>Alur sederhana untuk menerima pertanyaan, mengidentifikasi kebutuhan, memberikan informasi, dan melakukan tindak lanjut.</p></div><div class="project-foot">Simulasi · Bukan dokumen instansi</div></article>
+        </div>
+        <p class="disclaimer">Catatan: proyek di atas merupakan konsep simulasi portofolio, bukan klaim hasil kerja atau dokumen resmi dari perusahaan/instansi tempat pengalaman berlangsung.</p>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">04 / Cara Saya Bekerja</div><h2>Rapi dalam setiap<br><em>tahapan proses.</em></h2></div><p class="section-intro">Pendekatan kerja yang dapat diterapkan dalam aktivitas administrasi dan pelayanan sehari-hari.</p></div>
+        <div class="process-grid">
+          <div class="process-item reveal"><strong>01</strong><h3>Memahami</h3><p>Mengidentifikasi kebutuhan dan informasi yang diperlukan.</p></div>
+          <div class="process-item reveal"><strong>02</strong><h3>Mengorganisasi</h3><p>Menyusun data, dokumen, dan prioritas pekerjaan.</p></div>
+          <div class="process-item reveal"><strong>03</strong><h3>Memverifikasi</h3><p>Memeriksa ketepatan dan kelengkapan informasi.</p></div>
+          <div class="process-item reveal"><strong>04</strong><h3>Menindaklanjuti</h3><p>Memberikan informasi dan solusi sesuai kebutuhan.</p></div>
+          <div class="process-item reveal"><strong>05</strong><h3>Mengevaluasi</h3><p>Mencatat hasil dan mencari peluang perbaikan.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">05 / Kompetensi</div><h2>Keahlian yang<br><em>terus berkembang.</em></h2></div><p class="section-intro">Kompetensi yang saya gunakan dan kembangkan melalui pengalaman kerja, magang, serta pembelajaran.</p></div>
+        <div class="skill-grid">
+          <div class="skill-card reveal"><div class="icon">01</div><h3>Administrasi</h3><p>Pengelolaan data, pengarsipan, administrasi pendaftaran, dan penyusunan laporan.</p></div>
+          <div class="skill-card reveal"><div class="icon">02</div><h3>Pelayanan Pelanggan</h3><p>Komunikasi, pendampingan pengguna, pemberian informasi, dan penanganan kendala.</p></div>
+          <div class="skill-card reveal"><div class="icon">03</div><h3>Microsoft Office</h3><p>Microsoft Word, Excel, dan PowerPoint untuk kebutuhan dokumen dan administrasi.</p></div>
+          <div class="skill-card reveal"><div class="icon">04</div><h3>Google Workspace</h3><p>Penggunaan perangkat kerja kolaboratif untuk dokumen dan pengelolaan informasi.</p></div>
+          <div class="skill-card reveal"><div class="icon">05</div><h3>Komunikasi & Koordinasi</h3><p>Komunikasi interpersonal, koordinasi tim, dan penyampaian informasi secara jelas.</p></div>
+          <div class="skill-card reveal"><div class="icon">06</div><h3>Adaptasi & Ketelitian</h3><p>Berpikir kritis, pemecahan masalah, inisiatif, dan perhatian terhadap detail.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap contact-panel reveal">
+        <div><div class="eyebrow">06 / Mari Terhubung</div><h2>Terbuka untuk<br><em>kesempatan baru.</em></h2><p>Terima kasih telah mengunjungi portofolio saya. Saya terbuka untuk terhubung, bertukar informasi, dan menjajaki kesempatan profesional.</p><a class="btn primary" href="mailto:manisafanirahmasari@gmail.com">Hubungi Saya ↗</a></div>
+        <div class="contact-links"><a href="mailto:manisafanirahmasari@gmail.com">✉ &nbsp; manisafanirahmasari@gmail.com</a><a href="https://www.linkedin.com/in/manisafani/" target="_blank" rel="noopener noreferrer">↗ &nbsp; linkedin.com/in/manisafani</a><a href="#home">↑ &nbsp; Kembali ke atas</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© <span id="year"></span> Manisa Fani Rahmasari</span><span>Dibuat dengan perhatian pada detail.</span></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
